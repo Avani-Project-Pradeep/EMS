@@ -1,0 +1,223 @@
+/* BODY */
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/* NAVIGATION BAR */
+header{
+	background: black;
+	color: white;
+	padding: 10px 500px 6px 40px;
+	height: 60px;
+	width: 100%;
+}
+
+/* EMPLOYEE PORTAL HEADING */
+header h1{
+	display: inline;
+	font-weight: 400;
+	font-size: 32px;
+   color: ghostwhite;
+   margin-left: 20px;
+
+}
+
+
+/* NAVIGATION OPTIONS */
+ul {
+	list-style-type: none;
+	margin: -60 -40% 0 30;
+	padding: 10;
+	overflow: hidden;
+  }
+  
+  li {
+	float: right;
+  }
+  
+  li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+  
+ li a:hover
+ {
+	 background-color: grey;
+ }
+  
+ li  a:active{
+
+	background-color: green;
+
+ }
+    
+
+
+
+
+.left-section img {
+	position: absolute;
+	margin-left: 70px;
+	top: 200px;
+	margin: auto;
+	display: block;
+	background-color: beige;
+  }
+  
+
+
+.leavetable{
+	width: 100%;
+	height: auto;
+}
+
+.right-section {
+	
+	width: 800px;
+	margin-left: 30%;
+	margin-top:-25%;
+	text-align: start;
+	float:left;
+  }
+
+
+
+  
+
+  .tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 10px;
+	transition: 0.3s;
+	font-size: 17px;
+  }
+
+
+  label{
+	  font-size: x-large;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+	background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+ 
+  
+  
+  .peremp{
+	
+  
+    font-family: avenir;
+    font-size: 20px;
+    color: black;
+    font-weight: 200;
+    border: none;
+   
+  }
+
+  .place
+  {    font-weight:600;
+	  font-size: 25px;
+	  color: black;
+	  font-family: avenir;
+
+	  
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: black;
+  }
+
+  .tablinks
+  {
+	  font-weight:600;
+	  font-size: 20px;
+	  color:black;
+	  font-family: 'Times New Roman', Times, serif;
+
+  }
+  
+  .addbtn {
+	background-color: gray;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+
+  }
+
+
+
+  .prform {
+	
+	width: 100%;
+	text-align: start;
+	float:center;
+	background-color:#F0FFF0;
+	
+	position: relative;
+	
+		margin-left:auto;
+		margin-right:auto;
+		width:960px;
+	
+
+  }
+
+
+  .peform {
+    
+	width: 100%;
+	text-align: start;
+	float: center;
+	background-color:#F0FFF0;
+    border:green;	
+	position : relative;
+	
+		margin-left:auto;
+		margin-right:auto;
+		width:960px;
+
+	
+
+
+
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+
+}
+
+	
+
+  
+
+
+
+
+  
