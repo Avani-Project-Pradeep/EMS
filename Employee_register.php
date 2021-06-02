@@ -1,3 +1,43 @@
+<?php 
+
+include "connection.php";
+
+if(isset($_POST['submit'])) {
+
+  $ee_name = $_POST['ee_name'];
+  $ee_website = $_POST['ee_website'];
+  $ee_tc = $_POST['ee_tc'];
+  // $er_doc = $_POST['er_doc'];
+  $ee_phone = $_POST['ee_phone'];
+  $ee_city = $_POST['ee_city'];
+  $ee_state = $_POST['ee_state'];
+  $ee_email = $_POST['ee_email'];
+  $ee_password = $_POST['ee_password'];
+
+
+  $insertquery = "INSERT INTO employee_personal_details(ee_id,ee_first_name, ee_last_name,ee_image,ee_gender,ee_dob,ee_blood_type,ee_email_id,ee_contact,ee_pan,ee_aadhar,ee_emergency_contact,ee_state,ee_city,ee_permanent,ee_current,ee_hobbies,ee_education) "; 
+  $insertquery .= "VALUES ('{$ee_id}','{$ee_first_name}','{$ee_last_name}','{$ee_image}','{$ee_gender}','{$ee_dob}','{$ee_blood_type}','{$ee_email_id}','{}','{}','{}',) "; 
+   $result = mysqli_query($con, $insertquery);
+
+   if($result) {
+     ?>
+     <script>
+       alert ("data inserted properly");
+       </script>
+       <?php
+   } else {
+     ?>
+     <script>
+       alert("data not inserted");
+     </script>
+     <?php
+   }
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
