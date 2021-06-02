@@ -15,7 +15,7 @@ if(isset($_POST['submit'])) {
   $ee_password = $_POST['ee_password'];
 
 
-  $insertquery = "INSERT INTO employee_personal_details(ee_id,ee_first_name, ee_last_name,ee_image,ee_gender,ee_dob,ee_blood_type,ee_email_id,ee_contact,ee_pan,ee_aadhar,ee_emergency_contact,ee_state,ee_city,ee_permanent,ee_current,ee_hobbies,ee_education) "; 
+  $insertquery = "INSERT INTO employee_register(ee_first_name, ee_last_name,ee_image,ee_gender,ee_dob,ee_blood_type,ee_email_id,ee_contact,ee_pan,ee_aadhar,ee_emergency_contact,ee_state,ee_city,ee_permanent,ee_current,ee_hobbies,ee_education) "; 
   $insertquery .= "VALUES ('{$ee_id}','{$ee_first_name}','{$ee_last_name}','{$ee_image}','{$ee_gender}','{$ee_dob}','{$ee_blood_type}','{$ee_email_id}','{}','{}','{}',) "; 
    $result = mysqli_query($con, $insertquery);
 
@@ -63,41 +63,43 @@ if(isset($_POST['submit'])) {
 
 
     <div>
-      <input type="text" class="input1" placeholder="Enter your first name" name=" " required><span class="asterisk_input"></span>
+      <input type="text" class="input1" placeholder="Enter your first name" name="ee_fname" required><span class="asterisk_input"></span>
     </div>
       
     <div>
-      <input type="text" class="input1" placeholder="Enter your second name" name=" " required><span class="asterisk_input"></span>
+      <input type="text" class="input1" placeholder="Enter your second name" name="ee_lname" required><span class="asterisk_input"></span>
     </div>
 
     <div>
-      <input type="text" class="input1" placeholder="Enter phone number" name=" " required><span class="asterisk_input"></span>
+      <input type="text" class="input1" placeholder="Enter phone number" name="ee_phone" required><span class="asterisk_input"></span>
       </div>
 
       <div>
-      <input type="text" placeholder="City" name="er_city" id=location  required><span class ="asterisk_input"></span>
+      <input type="text" placeholder="City" name="ee_city" id=location  required><span class ="asterisk_input"></span>
 
 
       &nbsp &nbsp
 
 
-      <input type="text" placeholder="State" name="" id=location>
+      <input type="text" placeholder="State" name="ee_state" id=location>
 
       <div>
 
       <br>
 
-      <span><label style="font-size: 20px; color:blue;  display:inline-block">Upload Image</label> <i class='fas fa-upload' style='font-size:24px'></i><span><input type="file" name="er_tc" required> </span></span>
+      <span><label style="font-size: 20px; color:blue;  display:inline-block">Upload Image</label> <i class='fas fa-upload' style='font-size:24px'></i><span><input type="file" name="ee_img" required> </span></span>
 
       <br>
 
 
       <br>
      
-      <input type="text" class="input1" placeholder="Enter Address" name=" " required><span class="asterisk_input"></span>
+      <input type="text" class="input1" placeholder="Enter Address" name="ee_address" required><span class="asterisk_input"></span>
 
 
-      <input type="text" class="input1" placeholder="Enter Email" name=" " required><span class="asterisk_input"></span>
+      <input type="text" class="input1" placeholder="Enter Email" name="ee_email" required><span class="asterisk_input"></span>
+
+      <input type="text" class="input1" placeholder="Enter Password" name="ee_password" required><span class="asterisk_input"></span>
 
 
       <hr>
