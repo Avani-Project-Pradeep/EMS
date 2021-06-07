@@ -43,7 +43,11 @@
 
 
 <?php 
+<<<<<<< HEAD
 include "db_ee_connection.php"; //DB CONNECTION
+=======
+include "db_connection.php"; //DB CONNECTION
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 if(isset($_GET['token']))
 {
@@ -70,6 +74,7 @@ if(isset($_GET['token']))
     echo " <div class='error'>
     <p><strong></strong> Password does not match.<br></p> </div> ";
     }
+<<<<<<< HEAD
 
     $user_password=mysqli_real_escape_string($connection2,$user_password);
 
@@ -101,11 +106,27 @@ if(isset($_GET['token']))
       $edit_user_query = mysqli_query($connection2,$query);
 
    if($edit_user_query)
+=======
+    else
+    {   //updating password
+        $query = "UPDATE user SET ";
+        $query .="user_password   = '{$user_password}' ";
+        $query .= "WHERE user_email='{$user_email}' AND  token = '{$user_token}' ";
+
+        $edit_user_query = mysqli_query($connection,$query);
+
+
+        if($edit_user_query)
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
         {
          //success message    
   echo"<div class=success>
 <p><strong>Success!</strong> Password Reset Successful! <br>
+<<<<<<< HEAD
 <a href=http://localhost/ems/ee_login_form.php > Back to Login Page </a>
+=======
+<a href=http://localhost/ems/er_login_form.php > Back to Login Page </a>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 </p>
 </div>";
 
@@ -148,6 +169,10 @@ successfully.<br> Click  here for Login
 
    }
 }
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 ?>

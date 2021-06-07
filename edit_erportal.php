@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 <?php
 session_start();
 include "db_er_connection.php";
  ?>
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,8 +30,18 @@ include "db_er_connection.php";
     ;
   </style>
 </head>
+<<<<<<< HEAD
 <?php include "navbar.php"; ?>
 
+=======
+
+<?php
+
+
+/* NAVIGATION BAR */
+
+include "navbar.php"; ?>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 <ul>
 
   <li><a href="http://localhost/ems/employer_portal.php">Home</a></li>
@@ -62,6 +75,10 @@ include "db_er_connection.php";
     $query = "SELECT * FROM employer_personal_details WHERE er_email='$email_loggedin'";
     $selectquery = mysqli_query($connection, $query);
 
+<<<<<<< HEAD
+=======
+    check($query); //checks result of  query execution
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 
@@ -75,6 +92,7 @@ include "db_er_connection.php";
       <form action="image_action.php" enctype="multipart/form-data" method='post'>
 
         <!--  EMPLOYER IMAGE -->
+<<<<<<< HEAD
         <img src="images/<?php
         
         if(empty($er_image))
@@ -86,6 +104,9 @@ include "db_er_connection.php";
         
         
         echo $er_image;} ?>" style="margin:10px; width:300px ; height:300px; overflow:hidden;border:solid green" alt="Employer Image">
+=======
+        <img src="images/<?php echo $er_image; ?>" style="margin:10px; width:300px ; height:300px; overflow:hidden;border:solid green" alt="Employer Image">
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
         <br>
@@ -122,12 +143,31 @@ include "db_er_connection.php";
   <div class="col-sm-8" style="background-color:honeydew;">
 
     <?php
+<<<<<<< HEAD
     include "er_edit_profession.php"; //professional
+=======
+    //Professional Details
+
+
+
+
+
+
+
+
+
+    //Personal Details
+    include "er_edit_profession.php";
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
   echo"<hr>";
 
+<<<<<<< HEAD
     include "er_edit_personal.php"; //personal
+=======
+    include "er_edit_personal.php";
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
     ?>
 
     </form>

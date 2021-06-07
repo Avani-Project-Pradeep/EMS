@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 <? include "db_ee_connection.php"; ?>
 <? include "function.php" ; ?>
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +25,11 @@
 <?php 
 
 
+<<<<<<< HEAD
 /* TAB2 FORM */
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
   /* ADD EMPLOYEE PERSONAL DETAILS BY EMPLOYER */
 
@@ -36,8 +42,13 @@ include "navbar.php"; ?>
 <ul>
 
 <li><a href="http://localhost/ems/employer_portal.php">Home</a></li>
+<<<<<<< HEAD
 <li><a href="http://localhost/ems/manageindex.php">Manage Employees</a></li>
 <li><a href="#">Logout</a></li>
+=======
+<li><a href="#">Manage Employees</a></li>
+<li><a href="er_logout.php">Logout</a></li>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 </ul>
 </nav>
 <br>
@@ -54,7 +65,11 @@ include "navbar.php"; ?>
 
 <div class="centered">
 
+<<<<<<< HEAD
 <h1 style="margin-top:40px; margin-left:10px"><u> Add Employee</u> </h1>
+=======
+<h1 style=margin-top:60px;><u> Add Employee</u> </h1>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 <br>
 
 
@@ -67,6 +82,7 @@ include "navbar.php"; ?>
 
 </div>
 
+<<<<<<< HEAD
 <?php $ee_id=$_GET['id']?>
 
 
@@ -81,21 +97,37 @@ include "navbar.php"; ?>
 	<input type='file' name='ee_image' value="upload">
     <input type="submit" name="upload" value="upload">
 </span>
+=======
+<form action="ee_image_action.php"  enctype="multipart/form-data" method="post">
+
+<img src="images/blank image.png" style="margin:10px; width:300px ; height:300px; overflow:hidden;border:solid green" alt="Employer Image">
+
+
+	<input type='file' name='ee_img' value="upload">
+    <input type="submit" name="upload" value="upload">
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 </form>
 
 
 
+<<<<<<< HEAD
 <?php
 include "ee_image_action.php";
 ?>
 
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 
 
 
+<<<<<<< HEAD
 <form action="" method=post  style="margin-top:-300px ;margin-left:800px;">
+=======
+<form action="" method=post  style="float:right;margin-top:-300px;">
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 <div class="form-group">
 
 
@@ -103,6 +135,7 @@ include "ee_image_action.php";
 
     <label>First Name </label>
     <input type='text' name="ee_fname"  size="18" style="font-size: 18px;">
+<<<<<<< HEAD
     <span style="color:red">
           <?php
           global $error1; //TO COUNT ERRORS 
@@ -141,11 +174,14 @@ include "ee_image_action.php";
           ?>
         </span>
     
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
     <label>Last Name</label>
     <input type="text" name="ee_lname" size="15" style="font-size: 18px;">
 
+<<<<<<< HEAD
     <span style="color: red;">
         <?php
           if (isset($_POST['save']) || isset($_POST['update']) ) {
@@ -183,6 +219,8 @@ include "ee_image_action.php";
 
 
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 <br>
 <br>
 <br>
@@ -190,6 +228,7 @@ include "ee_image_action.php";
 
 
     <label> Gender </label>
+<<<<<<< HEAD
     <input type="text" name="ee_gender"  size="15" style="font-size: 18px;">
 <span style="color: red;">
         <?php
@@ -209,6 +248,15 @@ include "ee_image_action.php";
         
   ?>
 </span>
+=======
+
+
+<input type="radio" id="male" name="ee_gender" value="male" >
+<label for="male">Male</label>
+<input type="radio" id="female" name="ee_gender" value="female">
+<label for="female">Female</label>
+
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
    &nbsp &nbsp
 
@@ -217,6 +265,7 @@ include "ee_image_action.php";
 
 </div>
 
+<<<<<<< HEAD
 <span style="color: red;">
         <?php
           if (isset($_POST['save']) || isset($_POST['update']) ) {
@@ -238,11 +287,14 @@ include "ee_image_action.php";
 
 <br>
 <br>
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 <div class="form-group">
 
 
     <label> Email </label>
     <input type="email" name="ee_email"  style="font-size: 18px;" size="80" />
+<<<<<<< HEAD
     <span style="color: red;">
       <?php
           if (isset($_POST['save']) || isset($_POST['update']) ) {
@@ -271,6 +323,8 @@ include "ee_image_action.php";
       </span>
 
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
     <br>
     <br>
@@ -280,6 +334,7 @@ include "ee_image_action.php";
     <input type="tel" name="ee_phone" style="font-size: 18px;" size="20" />
     <label>
 </div>
+<<<<<<< HEAD
 <span style="color: red;">
 <?php
           if (isset($_POST['save']) || isset($_POST['update']) ) {
@@ -303,12 +358,15 @@ include "ee_image_action.php";
         ?>
 </span>
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 <br>
 <div class="form-group">
 
         <label>City</label>
         <input type='text' name="ee_city" size="15" style="font-size: 18px;">
+<<<<<<< HEAD
         <span style="color: red;">
     <?php
           if (isset($_POST['save']) || isset($_POST['update']) ) {
@@ -323,11 +381,14 @@ include "ee_image_action.php";
     ?>
   </span>
   
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
         &nbsp
 
         <label>State</label>
         <input type="text" name="ee_state"  size="20" style="font-size: 18px;">
+<<<<<<< HEAD
         <span style="color: red;">
           <?php
           if (isset($_POST['save']) || isset($_POST['update']) ) {
@@ -342,6 +403,8 @@ include "ee_image_action.php";
           ?>
         </span>
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
         &nbsp
 
@@ -356,6 +419,7 @@ include "ee_image_action.php";
 
         <label>Permanent Address</label>
         <input type='textarea' style="font-size: 18px;" name="ee_address" size='40'>
+<<<<<<< HEAD
         <span style="color: red;"> 
         <?php
           if (isset($_POST['save']) || isset($_POST['update']) ) {
@@ -371,12 +435,15 @@ include "ee_image_action.php";
         ?>
         </span>
      
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
         <br>
         <br>
         <label>Education</label>
         <input type='textarea' style="font-size: 20px;" name="ee_educational"  size='40'>
+<<<<<<< HEAD
         <span style="color: red;"> 
         <?php
           if (isset($_POST['save']) || isset($_POST['update']) ) {
@@ -394,6 +461,8 @@ include "ee_image_action.php";
      
 
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 <br>
 <br>
@@ -417,6 +486,7 @@ include "ee_image_action.php";
 
 
 
+<<<<<<< HEAD
 <?php 
 
 include "db_ee_connection.php"; 
@@ -531,6 +601,14 @@ if(isset($_POST['update']))
   if($error1==0){
 
   /* FETCHING THE DATA FROM FORM OF TAB 2 */
+=======
+<?php  
+
+
+if(isset($_POST['save']))
+{
+  // print_r($_POST);
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
    $ee_emailp=$_POST['ee_email'];
    $ee_fnamep=$_POST['ee_fname'];
    $ee_lnamep=$_POST['ee_lname'];
@@ -546,6 +624,7 @@ if(isset($_POST['update']))
 
 
 
+<<<<<<< HEAD
    $query = "SELECT * FROM employee_professional_details WHERE ee_id= $ee_id";
    $selectquery = mysqli_query($connection2, $query);
 
@@ -661,17 +740,30 @@ if(isset($_POST['update']))
 
 
 
+=======
+
+
+  // if(validated())
+
+  $query1="INSERT INTO employees_personal_details (Ee_first_name, Ee_last_name, ee_gender,ee_dob, ee_email_id, ee_contact,ee_state,ee_city,ee_permanent,ee_education) 
+  VALUES('$ee_fnamep','$ee_lnamep','$ee_genderp','$ee_dobp','$ee_emailp','$ee_phonep','$ee_statep','$ee_cityp','$ee_addressp','$ee_educationp')";
+
+  $result=check($query1);
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 }
 
 
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 ?>
 
 

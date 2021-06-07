@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <?php
 include "db_er_connection.php";
@@ -8,6 +9,8 @@ $error1=0;
  ?>
 
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +32,10 @@ $error1=0;
    
 
 <?php //FETCHING DETAILS FROM PERSONAL EMPLOYER TABLE
+<<<<<<< HEAD
+=======
+include "db_connection.php";
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
       
@@ -37,6 +44,10 @@ $error1=0;
      $query="SELECT * FROM employer_personal_details WHERE er_email='$email_loggedin'";
      $selectquery= mysqli_query($connection,$query);
 
+<<<<<<< HEAD
+=======
+     check($query); //checks result of  query execution
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
      
@@ -51,12 +62,99 @@ $error1=0;
      $er_state=$row['er_state'];
      $er_gender=$row['er_gender'];
      $er_address=$row['er_address'];
+<<<<<<< HEAD
      $er_education=$row['er_educational'];
 
 
     
 
      
+=======
+     $er_education=$row['er_educational'];}
+
+
+     if(isset($_GET['editper']))
+     {
+         if(isset($_POST['editp']))
+         {
+
+            $er_emailp=$_POST['er_email'];
+            $er_fnamep=$_POST['er_fname'];
+            $er_lnamep=$_POST['er_lname'];
+            $er_dobp=$_POST['er_dob'];
+            $er_phonep=$_POST['er_phone'];
+            $er_cityp=$_POST['er_city'];
+            $er_statep=$_POST['er_state'];
+            $er_genderp=$_POST['er_gender'];
+            $er_addressp=$_POST['er_address'];
+            $er_educationp=$_POST['er_educational'];
+       
+       
+
+
+         
+
+         $error1=0;
+     
+        if(empty($er_phonep))
+        {
+            $error1++; //SPECIFIES ERROR
+
+
+
+            echo " <div class='error'>
+              <p><strong></strong> Phone number field cannot be blank<br></p> </div> ";
+         
+        }
+
+        $mobilenumber = "/^[0-9][0-9]{9}$/";
+
+        if (!preg_match($mobilenumber, $er_phonep)) {
+    
+    
+            echo " <div class='error'>
+        <p><strong></strong> Please enter your 10 digit phone
+        number<br></p> </div> ";
+            $error1++;
+        }
+    
+
+        if($error1==0)
+        {
+
+
+
+         //IF NO ERROR,THEN ONLY DATABASE GETS UPDATED
+      if ($error1 == 0) {
+        $query = "UPDATE employer_personal_details SET ";
+        $query .= "er_firstname  = '{$er_fnamep}', ";
+        $query .= "er_lastname = '{$er_lnamep}', ";
+        $query .= "er_dob = '{$er_dobp}', ";
+        $query .= "er_email = '{$er_emailp}', ";
+        $query .= "er_phone   = '{$er_phonep}', ";
+        $query .= "er_city= '{$er_cityp}', ";
+        $query .= "er_state  = '{$er_statep}' ";
+        $query .= "er_gender  = '{$er_genderp}' ";
+        $query .= "er_address = '{$er_addressp}' ";
+        $query .= "er_educational  = '{$er_educationp}' ";
+        $query .= "WHERE er_email = '{$email_loggedin}' ";
+
+
+
+        $update = mysqli_query($connection, $query);
+
+        if ($update) {
+
+          echo " <div class='success'>
+          <p><strong></strong> Details are updated successfully<br></p> </div> ";
+     
+          
+        }
+      }
+    }
+}
+     }
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 ?>
 
@@ -82,6 +180,7 @@ $error1=0;
 
     <label>First Name </label>
     <input type='text' name="er_fname" value="<?php echo $er_fname ?>" size="18" style="font-size: 18px;">
+<<<<<<< HEAD
     <span style="color: red;">
     
 
@@ -125,10 +224,13 @@ $error1=0;
     
     
     </span>
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
     <label>Last Name</label>
     <input type="text" name="er_lname" value="<?php echo $er_lname ?>" size="15" style="font-size: 18px;">
+<<<<<<< HEAD
     <span style="color: red;">
     
     <?php if(isset($_POST['editp']))
@@ -168,6 +270,8 @@ $error1=0;
    
    
   
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
     &nbsp
 
@@ -183,6 +287,7 @@ $error1=0;
 
     <label> Email </label>
     <input type="email" name="er_email" value="<?php echo $er_email ?>" style="font-size: 18px;" size="60" />
+<<<<<<< HEAD
     <span>
     <?php
 
@@ -211,10 +316,15 @@ $error1=0;
     &nbsp
     <br>
     <br>
+=======
+
+    &nbsp
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
     <label> Phone Number </label>
     <input type="tel" name="er_phone" value="<?php echo $er_phone ?>" style="font-size: 18px;" size="10" />
     <label>
+<<<<<<< HEAD
     <span style="color: red;">
     
     <?php global $error1;
@@ -240,6 +350,8 @@ $error1=0;
       ?>
      
     </span>
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 </div>
 
@@ -303,6 +415,7 @@ $error1=0;
 
 </html>
 
+<<<<<<< HEAD
 <?php
 
 if(isset($_GET['editper']))
@@ -360,6 +473,10 @@ if(isset($_GET['editper']))
     }}
   }
 
+=======
+
+
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 

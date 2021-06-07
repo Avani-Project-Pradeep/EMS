@@ -22,7 +22,11 @@
     
 <?php
 
+<<<<<<< HEAD
 include "db_ee_connection.php";
+=======
+include "db_connection.php";
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 //FETCHING DETAILS FROM FORM
 if(isset($_POST['login']))
@@ -41,6 +45,7 @@ if(empty($email)&& empty($password) )
 }
 
   //SQL INJECTION
+<<<<<<< HEAD
   $email = mysqli_real_escape_string($connection2, $email);
   $password = mysqli_real_escape_string($connection2,$password);
 
@@ -51,6 +56,18 @@ if(empty($email)&& empty($password) )
 
    if (!$select_user_query) {
        die("QUERY FAILED" . mysqli_error($connection2));
+=======
+  $email = mysqli_real_escape_string($connection, $email);
+  $password = mysqli_real_escape_string($connection,$password);
+
+   //FETCHING DETAILS FROM USER TABLE
+
+   $query = "SELECT * FROM user WHERE user_email='{$email}'";
+   $select_user_query = mysqli_query($connection, $query);
+
+   if (!$select_user_query) {
+       die("QUERY FAILED" . mysqli_error($connection));
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
    }
    else{
 
@@ -60,6 +77,10 @@ if(empty($email)&& empty($password) )
        $db_password = $row['user_password'];
        
 
+<<<<<<< HEAD
+=======
+//       echo"$db_email,$db_password";
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 
@@ -71,21 +92,34 @@ if(mysqli_num_rows($select_user_query)==0)
     header("location:ee_login_form.php");
 }
 
+<<<<<<< HEAD
 $cryptpassword = crypt($password, $db_password);
 
     //VALIDATING  ALL DETAILS 
 
     if(($email==$db_email) && ($db_password==$cryptpassword))
+=======
+
+    //VALIDATING  ALL DETAILS 
+
+    if(($email==$db_email) && ($db_password==$password))
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
     {
      
      //IF EQUAL SESSION STARTS AND SET
                session_start();
+<<<<<<< HEAD
                 $_SESSION['email']=$db_email;
                 $_SESSION['password']=$db_password;
         
                 $_SESSION['last_login_timestamp'] = time();
                 
 
+=======
+                $_SESSION['role']='employee';
+                $_SESSION['email']=$db_email;
+                $_SESSION['password']=$db_password;
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
  
                 //GO TO EMPLOYEE  PORTAL
              header("location:employee_portal.php");
@@ -99,7 +133,11 @@ $cryptpassword = crypt($password, $db_password);
  </div>
  <br>
  
+<<<<<<< HEAD
  <a href="http://localhost/ems/ee_login_form.php" > Back to Login Page </a>
+=======
+ <a href="http://localhost/ems/employee_portal/ee_login_form.php" > Back to Login Page </a>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
   
  
  

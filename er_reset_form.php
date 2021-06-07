@@ -43,7 +43,11 @@
 
 
 <?php 
+<<<<<<< HEAD
 include "db_er_connection.php"; //DB CONNECTION
+=======
+include "db_connection.php"; //DB CONNECTION
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 if(isset($_GET['token']))
 {
@@ -71,6 +75,7 @@ if(isset($_GET['token']))
     <p><strong></strong> Password does not match.<br></p> </div> ";
     }
     else
+<<<<<<< HEAD
     {   
       
       $user_password=mysqli_real_escape_string($connection,$user_password);
@@ -92,6 +97,10 @@ if(isset($_GET['token']))
       
       //updating password
         $query = "UPDATE er_login SET ";
+=======
+    {   //updating password
+        $query = "UPDATE user SET ";
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
         $query .="user_password   = '{$user_password}' ";
         $query .= "WHERE user_email='{$user_email}' AND  token = '{$user_token}' ";
 

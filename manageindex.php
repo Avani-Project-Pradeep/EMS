@@ -1,4 +1,5 @@
 <!-- DATABASE -->
+<<<<<<< HEAD
 <HTML>
 <?php include "db_ee_connection.php"; ?>
 <?php include "header.php" ;?>
@@ -20,12 +21,22 @@
 
 
 
+=======
+<?php include "db_connection.php"; ?>
+
+<?php include "includes/header.php" ;?>
+<!-- NAVIGATION -->
+<?php include "managenavigation.php"; ?>
+
+ 
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 <div class="container">
  
 
     <div class="row">
  
+<<<<<<< HEAD
          
         <div class="col-md-6">
  
@@ -34,6 +45,23 @@
 
 
                 $limit=2;
+=======
+
+         
+
+         
+
+   
+   
+
+        <div class="col-md-12">
+ 
+          
+            <?php
+
+
+                $limit=4;
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
                 if(isset($_GET['page']))
                 {
@@ -47,6 +75,7 @@
                 $offset=($page-1)*$limit;
 
 
+<<<<<<< HEAD
                 $query="SELECT * FROM employee_personal_details INNER JOIN  employee_professional_details ON 
                  employee_personal_details.ee_id = employee_professional_details.ee_id  LIMIT {$offset},{$limit}";
                 
@@ -148,6 +177,81 @@ else
  <span>
 <i style='font-size:24px' class='fas'>&#xf108;</i>
  <a style="font-size: 24px;" href="individualemployee.php?ee_id=<?php echo $ee_id;?>">View</a>
+=======
+
+            // DYNAMIC EMPLOYEE DETAILS FROM OUR DATABASE
+            $query = "SELECT * FROM employee  LIMIT {$offset},{$limit}";
+            $select_all_employee_query = mysqli_query($connection, $query);
+            
+
+
+               
+ 
+            //LOOP STARTED HERE
+            while ($row = mysqli_fetch_assoc($select_all_employee_query)) {
+  
+              $e_id=$row['e_id'];
+              $e_name=$row['e_name'];
+              $e_image=$row['e_img'];
+              $e_doj=$row['e_doj'];
+              $e_desig=$row['e_desig'];
+              $e_status=$row['e_status'];
+                {
+
+             
+
+            ?>
+
+<!-- EMPLOYEES -->
+                <h1><i>
+
+                    <!-- E_NAME -->
+                       
+                    <a  href="individualemployee.php?e_id=<?php echo $e_id;?>"><?php echo 
+                    $e_name ?></a>
+
+                   
+                </i></h1>
+                <p class="lead">
+                    <!--DESIGNATION-->
+                   <span style="color:green" ><u><?php echo"Designation : $e_desig "; ?></u></span>
+
+
+                   &nbsp &nbsp
+
+
+                        <!-- E_ID -->
+         <u><a style="color:green; font:italic;" href="individualemployee.php?e_id=<?php echo $e_id;?>"><?php echo 
+                  "Employee ID :  $e_id ";?></a></u>
+
+                                
+                                   <br>
+                                   <br>
+   
+                <!-- EMPLOYEE IMAGE -->
+                <img src="images/<?php echo $e_image; ?>" style="margin:10px; width:300px ; height:300px; overflow:hidden;border:solid green" alt="Employer Image">
+
+                  <!--  DATE OF JOINING  -->
+                  
+                  <br> <br>
+                   
+                  <span class="glyphicon glyphicon-time"></span> Joined on <?php echo  $e_doj ;?>
+
+
+                  &nbsp &nbsp
+
+
+                  <span><i style='font-size:15px' class='far'>&#xf35a;</i>
+Status: <?php echo $e_status; ?>
+
+<br>
+<br>
+
+
+<span>
+<i style='font-size:24px' class='fas'>&#xf108;</i>
+ <a style="font-size: 24px;" href="individualemployee.php?e_id=<?php echo $e_id;?>">View</a>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 </span>
 
@@ -157,7 +261,11 @@ else
 <span>
 
 <i style='font-size:24px' class='fas'>&#xf044;</i>
+<<<<<<< HEAD
 <a href='http://localhost/ems/editindividualemployee.php?edit=1&ee_id=<?php echo "$ee_id"?>'>Edit</a></span>
+=======
+<a href="edit_employee.php?e_id=<?php echo $e_id;?>">Edit</a></span>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 
@@ -170,7 +278,11 @@ else
 <span>
 <span class="glyphicon">&#xe174;</span>
 
+<<<<<<< HEAD
 <a href="delete_employee.php?delete=1&ee_id=<?php echo $ee_id;?>">Delete</a></span>
+=======
+<a href="delete_employee.php?e_id=<?php echo $e_id;?>">Delete</a></span>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 </span>
@@ -182,12 +294,17 @@ else
 
 <i style='font-size:24px' class='fas'>&#xf305;</i>
 
+<<<<<<< HEAD
 <a href="statusemployee.php?status=Active&ee_id=<?php echo $ee_id;?>">Change Status to Active</a></span>
+=======
+<a href="statusemployee?e_id=e_id<?php echo $e_id;?>">Change Status to Active</a></span>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 <br>
 
 
 <i style='font-size:24px' class='fas'>&#xf305;</i>
 
+<<<<<<< HEAD
 <a href="statusemployee.php?status=Inactive&ee_id=<?php echo $ee_id;?>">Change Status to Inactive</a></span>
 
 
@@ -205,6 +322,9 @@ else
 <p style="color:black ; font-size:x-large; "?>
 
 <?php  echo $ee_email ?></p>
+=======
+<a href="statusemployee?e_id=<?php echo $e_id;?>">Change Status to Inactive</a></span>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 
@@ -230,7 +350,11 @@ else
 
 
 
+<<<<<<< HEAD
             <?php }?>
+=======
+            <?php }}?>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
             <!-- LOOP OVER  -->
 
  
@@ -267,8 +391,13 @@ else
             
             //PAGINATION
 
+<<<<<<< HEAD
    $query1="SELECT * FROM employee_personal_details ";
    $result1= mysqli_query($connection2,$query1); 
+=======
+   $query1="SELECT * FROM employee ";
+   $result1= mysqli_query($connection,$query1); 
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
    if(mysqli_num_rows($result1)>0)
    {
@@ -320,13 +449,30 @@ else
    
    
    ?>
+<<<<<<< HEAD
 
  
 
 </BODY>
 </HTML>
                 
+=======
+ 
+         
+           
+         
 
 
 
 
+        
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
+
+
+
+
+<<<<<<< HEAD
+=======
+          
+          
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2

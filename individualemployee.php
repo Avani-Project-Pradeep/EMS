@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -418,3 +419,107 @@ employee_personal_details.ee_id = employee_professional_details.ee_id WHERE empl
 
 
      
+=======
+<!-- DATABASE -->
+<?php include "db_connection.php"; ?>
+
+<?php include "includes/header.php" ;?>
+<!-- NAVIGATION -->
+<?php include "managenavigation.php"; ?>
+
+<div class="container">
+ 
+
+    <div class="row">
+ 
+
+        <div class="col-md-12">
+            <?php
+
+            if(isset($_GET['e_id']))
+            {
+                $the_e_id=$_GET['e_id'];
+            
+
+            // DYNAMIC EMPLOYEE DETAILS FROM OUR DATABASE
+            $query = "SELECT * FROM employee WHERE e_id=$the_e_id";
+            $select_all_employee_query = mysqli_query($connection, $query);
+            
+
+
+               
+
+ 
+            //LOOP STARTED HERE
+            while ($row = mysqli_fetch_assoc($select_all_employee_query)) {
+  
+              $e_id=$row['e_id'];
+              $e_name=$row['e_name'];
+              $e_image=$row['e_img'];
+              $e_doj=$row['e_doj'];
+              $e_desig=$row['e_desig'];
+              $e_status=$row['e_status'];
+                {
+
+             
+
+            ?>
+
+<!-- EMPLOYEES -->
+                <h1><i>
+
+                    <!-- E_NAME -->
+                       
+                    <a  href="individualemployee.php?e_id=<?php echo $e_id;?>"><?php echo 
+                    $e_name ?></a>
+
+                   
+                </i></h1>
+                <p class="lead">
+                    <!--DESIGNATION-->
+                   <span style="color:green" ><u><?php echo"Designation : $e_desig "; ?></u></span>
+
+
+                   &nbsp &nbsp
+
+
+                        <!-- E_ID -->
+         <u><a style="color:green; font:italic;" href="individualemployee.php?e_id=<?php echo $e_id;?>"><?php echo 
+                  "Employee ID :  $e_id ";?></a></u>
+
+                                
+                                   <br>
+                                   <br>
+   
+                <!-- EMPLOYEE IMAGE -->
+                <img src="images/<?php echo $e_image; ?>" style="margin:10px; width:300px ; height:300px; overflow:hidden;border:solid green" alt="Employer Image">
+
+                  <!--  DATE OF JOINING  -->
+                  
+                  <br> <br>
+                   
+                  <span class="glyphicon glyphicon-time"></span> Joined on <?php echo  $e_doj ;?>
+
+
+                  &nbsp &nbsp
+
+
+                  <span><i style='font-size:15px' class='far'>&#xf35a;</i>
+Status: <?php echo $e_status; ?>
+
+<br>
+<br>
+<i style='font-size:24px' class='fas'>&#xf530;</i>
+
+<a href=#>View More Details</a>
+
+
+<br>
+<br>
+
+
+
+<?php }}}?>
+
+          
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2

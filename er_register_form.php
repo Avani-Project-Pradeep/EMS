@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 <?php include "db_er_connection.php"; ?> <!-- DATABSE -->
+=======
+<?php include "er_register_action.php" ?> <!-- ACTION PHP -->
+
+
+
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +31,11 @@
 
   <!-- EMPLOYER REGISTRATION FORM -->
 
+<<<<<<< HEAD
   <form action=" " enctype="multipart/form-data" method='post'>
+=======
+  <form action="<?php echo $_SERVER['SCRIPT_NAME'] ?>	" enctype="multipart/form-data" method='post'>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
     <div class="container">
       <h1><u>Employer Registeration</u></h1>
       <hr>
@@ -34,6 +45,7 @@
 
 
 
+<<<<<<< HEAD
       <input type="text" class="input1" style="background-color: <?php echo $returnStyle1 ?>;" placeholder="Enter Company name" name="er_comp_name" ><span class="asterisk_input"></span>
 
       <span style="color:red">
@@ -179,10 +191,22 @@
 
 
       
+=======
+      <input type="text" class="input1" style="background-color: <?php echo $returnStyle1 ?>;" placeholder="Enter Company name" name="er_comp_name" required><span class="asterisk_input"></span>
+
+
+      <input type="text" class="input1" style="background-color: <?php echo $returnStyle2 ?>;" placeholder="Enter Company Website" name="er_comp_website" required><span class="asterisk_input"></span>
+
+      <br>
+      <br>
+
+      <span><label style="font-size: 20px; color:blue;  display:inline-block">Upload Terms and Conditions agreement</label> <i class='fas fa-upload' style='font-size:24px'></i> <span class="asterisk_input1"></span> <span><input type="file" name="er_tc" required> </span></span>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
       <br>
 
 
+<<<<<<< HEAD
       
       
       <label style="font-size: 20px; color:blue; display:inline-block">Upload Company Documents</label> <i class='fas fa-upload' style='font-size:24px'></i> <span class="asterisk_input1"></span> <span><input type="file" name="er_cd" ></span>
@@ -306,6 +330,27 @@ if(isset($_POST['er_register'])){
 }
        
 ?></span>
+=======
+      <label style="font-size: 20px; color:blue; display:inline-block">Upload Company Documents</label> <i class='fas fa-upload' style='font-size:24px'></i> <span class="asterisk_input1"></span> <span><input type="file" name="er_cd" required></span>
+
+
+      <br>
+      <br>
+
+      <input type="tel" class="input1" style="background-color: <?php echo $returnStyle3 ?>;" placeholder="Enter Phone Number " name="er_phone" required><span class="asterisk_input"></span>
+
+
+      <br>
+
+
+
+      <input type="text" placeholder="City" name="er_city" id=location>
+
+
+      &nbsp &nbsp
+
+
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
       <input type="text" placeholder="State" name="er_state" id=location>
 
 
@@ -313,6 +358,7 @@ if(isset($_POST['er_register'])){
 
 
 
+<<<<<<< HEAD
       <input type="text" style="background-color: <?php echo "$returnStyle4" ?>;" placeholder="Enter Email" class="input1" name="er_email" ><span class="asterisk_input"></span>
       <span style="color:red">
         <?php
@@ -415,6 +461,17 @@ if(isset($_POST['er_register'])){
   }
   }
 }?>
+=======
+      <input type="text" style="background-color: <?php echo "$returnStyle4" ?>;" placeholder="Enter Email" class="input1" name="er_email" required><span class="asterisk_input"></span>
+
+
+
+
+      <input type="password" style="background-color: <?php echo "$returnStyle5" ?>;" class="input1" placeholder="Enter Password" name="er_password" required><span class="asterisk_input"></span>
+
+
+      <input type="password" class="input1" style="background-color: <?php echo "$returnStyle6" ?>;" placeholder="Confirm Password" name="er_confirm_password" required><span class="asterisk_input"></span>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 
@@ -432,6 +489,7 @@ if(isset($_POST['er_register'])){
 
 </body>
 
+<<<<<<< HEAD
 </html>
 
 
@@ -557,3 +615,6 @@ if(isset($_POST['er_register'])){
 
 
 ?>
+=======
+</html>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2

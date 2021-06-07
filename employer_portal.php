@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,6 +125,8 @@ if(isset($_POST['upload']))
 
 
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 <!DOCTYPE html>
 <html lang="en">
 
@@ -190,6 +193,10 @@ include "navbar.php"; ?>
     $query = "SELECT * FROM employer_personal_details WHERE er_email='$email_loggedin'";
     $selectquery = mysqli_query($connection, $query);
 
+<<<<<<< HEAD
+=======
+    check($query); //checks result of  query execution
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 
@@ -201,7 +208,11 @@ include "navbar.php"; ?>
 
     ?>
 
+<<<<<<< HEAD
       <form action="" enctype="multipart/form-data" method='post'>
+=======
+      <form action="image_action.php" enctype="multipart/form-data" method='post'>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
         <!--  EMPLOYER IMAGE -->
 

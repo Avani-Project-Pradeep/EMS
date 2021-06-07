@@ -9,6 +9,7 @@
 </head>
 <body>
 <nav >
+<<<<<<< HEAD
 
        <div> 
        <!-- LOGO -->
@@ -39,5 +40,17 @@
        <!-- SOME FILES THAT ARE NEEDED IN EVERY PAGE SO INCLUDING IT IN NAV BAR -->
        <!-- THIS HELPS IN NO MULTI DECLARATION ERROR -->
        
+=======
+       <div>
+           <h1><img src="images/logo1.jpeg " style="width: 80px; ; height:80px;" alt="logo"></a></h1>
+
+       </div>
+       <h1 style="color: whitesmoke;">EMPLOYER PORTAL </h1>
+       <!-- SOME FILES THAT ARE NEEDED IN EVERY PAGE SO INCLUDING IT IN NAV BAR -->
+       <!-- THIS HELPS IN NO MULTI DECLARATION ERROR -->
+       <?php session_start(); 
+             include "function.php" ;
+       ?>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
        
       <!-- NAVIGATION OPTIONS CONTINUED ... -->

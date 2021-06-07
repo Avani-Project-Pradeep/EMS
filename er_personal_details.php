@@ -1,5 +1,9 @@
 <?php //FETCHING DETAILS FROM PERSONAL EMPLOYER TABLE
+<<<<<<< HEAD
 include "db_er_connection.php";
+=======
+include "db_connection.php";
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
       
@@ -8,6 +12,10 @@ include "db_er_connection.php";
      $query="SELECT * FROM employer_personal_details WHERE er_email='$email_loggedin'";
      $selectquery= mysqli_query($connection,$query);
 
+<<<<<<< HEAD
+=======
+     check($query); //checks result of  query execution
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
      

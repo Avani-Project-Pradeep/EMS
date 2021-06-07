@@ -15,10 +15,17 @@
 </head>
 
 <body>
+<<<<<<< HEAD
  <!-- FORM -->
 <div class="container">
     <div class="login-form">
  <form class = "box" action =" " method = "post">
+=======
+ 
+<div class="container">
+    <div class="login-form">
+ <form class = "box" action ="er_login_action.php" method = "post">
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 <h1>Employer Login</h1>
 <p1 style="color:#ADD8E6">Please Enter Your Credentials</p1>
 
@@ -40,6 +47,7 @@
 
 
 
+<<<<<<< HEAD
 <?php
 
 include "db_er_connection.php"; //DATABASE
@@ -137,3 +145,5 @@ while ($row = mysqli_fetch_assoc($select_user_query)) {
 
 
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2

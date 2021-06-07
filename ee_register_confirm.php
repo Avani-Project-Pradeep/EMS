@@ -2,7 +2,11 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
   <title>Confirmation of Employee Registration</title>
+=======
+  <title>Confirmation of Employer Registration</title>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
   <meta charset="utf-8">
 
@@ -31,7 +35,11 @@
 
 
 
+<<<<<<< HEAD
   include "db_ee_connection.php";
+=======
+  include "db_connection.php";
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
   include "function.php";
 
   //GETTING EMAIL FROM GET METHOD
@@ -50,6 +58,7 @@
 $user_password=password_generate(5);
 //echo $user_password;
 
+<<<<<<< HEAD
 $query="SELECT randSalt FROM ee_login";
 
 $select_randsalt_query=mysqli_query($connection2,$query);
@@ -66,12 +75,21 @@ $user_passwordcrypt=crypt($user_password,$salt);
 
 $query = "UPDATE ee_login SET ";
 $query .="user_password   = '{$user_passwordcrypt}'" ;
+=======
+ 
+$query = "UPDATE user SET ";
+$query .="user_password   = '{$user_password}'" ;
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 $query .= "WHERE user_email='{$to_email}'";
 
 
 
 
+<<<<<<< HEAD
 $selectquery=mysqli_query($connection2,$query);
+=======
+$selectquery=mysqli_query($connection,$query);
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 

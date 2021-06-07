@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 <?php include "db_er_connection.php"; ?>
 <!-- DATABSE -->
 <?php
 include "function.php";
 ?>
+=======
+<?php include "ee_register_action.php"; ?> <!-- ACTION PHP -->
+
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,14 +28,25 @@ include "function.php";
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 </head>
+<<<<<<< HEAD
 <body>
   <form action=" " enctype="multipart/form-data" method="post">
     <div>
       <h1><u>Employee Registeration Form</u></h1>
+=======
+
+
+
+<body>
+  <form action="<?php echo $_SERVER['SCRIPT_NAME'] ?>	" enctype="multipart/form-data" method="post">
+    <div>
+      <h1><u>Employee Registeration</u></h1>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
       <hr>
 
 
       <div>
+<<<<<<< HEAD
   
       <input type="text" class="input1" placeholder="Enter your first name" name="ee_fname" style="background-color: <?php echo $returnStyle1 ?> " ><span class="asterisk_input"></span>
       <span style="color:red">
@@ -210,6 +226,28 @@ include "function.php";
         </span>
 
 
+=======
+        <input type="text" class="input1" placeholder="Enter your first name" name="ee_fname" style="background-color: <?php echo $returnStyle1 ?> ";
+        required><span class="asterisk_input"></span>
+      </div>
+
+      <div>
+        <input type="text" class="input1" placeholder="Enter your second name" name="ee_lname" style="background-color: <?php echo $returnStyle2 ?>" required><span class="asterisk_input"></span>
+      </div>
+
+      <div>
+        <input type="text" class="input1" placeholder="Enter phone number" name=" ee_phone" style="background-color: <?php echo $returnStyle3 ?>" required><span class="asterisk_input"></span>
+      </div>
+
+      <span>
+        <input type="text" placeholder="City" name="ee_city" id=location style="background-color: <?php echo $returnStyle4 ?>"required><span class="asterisk_input"></span>
+
+
+        &nbsp &nbsp &nbsp
+
+
+        <input type="text" placeholder="State" name="ee_state" id=location style="background-color: <?php echo $returnStyle5 ?>"required><span class="asterisk_input"></span>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
         &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -218,6 +256,7 @@ include "function.php";
         <input type="file" name="ee_image"> <label style="font-size: 20px; color:blue; display:inline-block">Upload Image</label>
         <i style='font-size:24px' class='fas'>&#xf1c5;</i>
 
+<<<<<<< HEAD
         <span style="color:red">
         <?php
         if(isset($_POST['ee_register']))
@@ -265,11 +304,14 @@ include "function.php";
         ?>
       </span>
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 
 
 
+<<<<<<< HEAD
       <br>
       <br>
 
@@ -299,6 +341,15 @@ include "function.php";
 
 
       </span>
+=======
+      </span>
+      <br>
+
+      <input type="text" class="input1" placeholder="Enter Address" name="ee_address" style="background-color: <?php echo $returnStyle6 ?>"required><span class="asterisk_input"></span>
+      <br>
+
+      <input type="text" class="input1" placeholder="Enter Email" name="ee_email" style="background-color: <?php echo $returnStyle7 ?>"required><span class="asterisk_input"></span>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
       <hr>
@@ -307,6 +358,7 @@ include "function.php";
       <button type="submit" name="ee_register" class="registerbtn">Register</button>
     </div>
 
+<<<<<<< HEAD
     </div>
   </form>
 
@@ -431,3 +483,11 @@ if (isset($_POST['ee_register'])) {
 
 
         
+=======
+</div>
+  </form>
+
+</body>
+
+</html>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2

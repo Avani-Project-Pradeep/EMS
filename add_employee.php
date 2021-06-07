@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php include "db_ee_connection.php"; ?>
 
 <!-- FUNCTIONS -->
 <?php include "function.php"; ?>
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,11 +29,14 @@
             background-color: honeydew
         }
 
+<<<<<<< HEAD
         .error {
             background-color: #ffdddd;
             border-left: 6px solid #f44336;
         }
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
         ;
     </style>
 </head>
@@ -46,7 +52,11 @@ include "navbar.php"; ?>
 <ul>
 
     <li><a href="http://localhost/ems/employer_portal.php">Home</a></li>
+<<<<<<< HEAD
     <li><a href="http://localhost/ems/manageindex.php">Manage Employees</a></li>
+=======
+    <li><a href="#">Manage Employees</a></li>
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
     <li><a href="#">Logout</a></li>
 </ul>
 </nav>
@@ -54,7 +64,11 @@ include "navbar.php"; ?>
 
 
 
+<<<<<<< HEAD
 <!-- TAB 1 PROFESSIONAL FORM -->
+=======
+
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 <ul class="nav nav-pills nav-justified">
     <li style="background-color:green;"><a style='color:white' href="add_employee.php">Tab1</a></li>
@@ -85,6 +99,7 @@ include "navbar.php"; ?>
         <div class="col-sm-6" style="background-color:honeydew; margin-left:50px">
 
 
+<<<<<<< HEAD
           
           <!-- E_ID -->
           
@@ -122,6 +137,10 @@ include "navbar.php"; ?>
 
 
             </span>
+=======
+            <label>Employee ID</label>
+            <input type='text' name="ee_id" size="15" style="font-size: 18px;">
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
             <br>
             <br>
@@ -131,6 +150,7 @@ include "navbar.php"; ?>
 
             <label>Designation</label>
             <input type='text' name="ee_designation" size="25" style="font-size: 18px;">
+<<<<<<< HEAD
             <span style="color: red;">
                 <?php
                 if (isset($_POST['next'])) {
@@ -233,6 +253,36 @@ include "navbar.php"; ?>
 
 
                 </span>
+=======
+
+            <br>
+            <br>
+            <br>
+
+
+
+            <label> Department: </label>
+            <input type="text" name="ee_department" style="font-size: 18px;" size="15">
+
+            <br>
+            <br>
+            <br>
+
+
+            <label> Division: </label>
+            <input type="text" name="ee_division" style="font-size: 18px;" size="15">
+
+
+
+
+            <br>
+            <br>
+            <br>
+
+
+            <label> Employee Type </label>
+            <input type="text" name="ee_type" style="font-size: 18px;" size="15">
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
         </div>
 
@@ -240,6 +290,7 @@ include "navbar.php"; ?>
 
             <label> Date of Joining: </label>
             <input type="date" name="ee_doj" value="doj php" style="font-size: 20px;" size="15">
+<<<<<<< HEAD
             <span style="color: red;" >
                     <?php
                     if (isset($_POST['next'])) {
@@ -261,6 +312,8 @@ include "navbar.php"; ?>
 
 
         
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
             <br>
@@ -269,6 +322,7 @@ include "navbar.php"; ?>
 
             <label>Company Name </label>
             <input type="text" name="ee_comp_name" style="font-size: 18px;" size="15">
+<<<<<<< HEAD
             <span style="color: red;">
                     <?php
                     if (isset($_POST['next'])) {
@@ -295,6 +349,8 @@ include "navbar.php"; ?>
 
                 </span>
 
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
             <br>
             <br>
@@ -302,6 +358,7 @@ include "navbar.php"; ?>
 
             <label>Reporting Manager </label>
             <input type="text" name="ee_rep_name" style="font-size: 18px;" size="15">
+<<<<<<< HEAD
             <span style="color: red;" >
                     <?php
                     if (isset($_POST['next'])) {
@@ -327,11 +384,40 @@ include "navbar.php"; ?>
 
             
                   
+=======
 
             <br>
             <br>
             <br>
 
+            <label>Shift </label>
+            <input type="text" name="ee_shift" style="font-size: 18px;" size="15">
+
+            <br>
+            <br>
+            <br>
+
+            <label>Employee Status </label>
+            <input type="text" name="ee_status" style="font-size: 18px;" size="15">
+
+            <br>
+            <br>
+            <br>
+
+
+            <input type="submit" value="Next>>" style="font: size 25px;;" name="next">
+
+            <br>
+            <br>
+            <br>
+
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
+
+            <br>
+            <br>
+            <br>
+
+<<<<<<< HEAD
             <label>Shift </label>
             <input type="text" name="ee_shift" style="font-size: 18px;" size="15">
             <span style="color: red;" >
@@ -437,10 +523,133 @@ if (isset($_POST['next'])) {
     $ee_rep_manager = $_POST['ee_rep_name'];
     $ee_shift = $_POST['ee_shift'] ;
     $ee_status=$_POST['ee_status'];
+=======
+
+
+            </body>
+
+</html>
+
+<?php 
+
+
+  include "db_connection.php";
+ 
+ //WHEN ACTOR  WILL CLICK NEXT, 
+ //THE DATA WILL GET POSTED AND THEN CHECK WHETHER MANDATORY  FIELD  ARE EMPTY OR NOT 
+
+
+if (isset($_POST['next'])) {
+    //FETCHING DATA FROM 
+       
+    $error=0; //SPECIFIES NO ERROR
+
+
+      
+    //print_r($_POST);
+    $ee_id = $_POST['ee_id'];
+
+
+   $checkid= is_numeric($ee_id);
+
+   if(!$checkid) //NO ALPHANUMERIC
+   {
+       $error++;
+    echo " <div class='error'>
+    <p style=font-size:'xx large'><strong> Employee Id can't be alphanumeric.</strong> <br></p> </div> ";
+     $error++;
+   }
+
+  if(maxlength($ee_id,10)) //CHECKING MAX LIMIT FUNCTION
+  {
+      $error++ ;
+    }
+   
+   
+    $ee_designation = $_POST['ee_designation'];
+
+    if(maxlength($ee_designation,50))
+    {
+        $error++;
+    }
+
+     $ee_department = $_POST['ee_department'];
+
+
+     if(maxlength($ee_department,50))
+     {
+         $error++;
+     }
+ 
+
+
+    $ee_division = $_POST['ee_division'];
+
+    if(maxlength($ee_division,100))
+    {
+        $error++;
+    }
+
+    $ee_type = $_POST['ee_type'];
+
+    $ee_doj  =    $_POST['ee_doj'];
+    $ee_comp_name = $_POST['ee_comp_name'];
+    $ee_rep_manager = $_POST['ee_rep_name'];
+
+    if(maxlength($ee_rep_manager,50))
+    {
+        $error++;
+    }
+
+
+
+    $ee_shift = $_POST['ee_shift'];
+   
+    if(maxlength($ee_shift,50))
+    {
+        $error++;
+    }
 
 
 
 
+
+
+    $ee_status = $_POST['ee_status'];
+    if(maxlength($ee_status,50))
+    {
+        $error++;
+    }
+
+
+
+     /* echo $error; */
+ 
+    
+
+    $countempty = 0;
+    //CHECKING  AND COUNTING EMPTY VARIABLES IF EXISTS
+    foreach ($_POST as $key => $value) {
+
+        if (!isset($value) || empty($value)) {
+
+            $countempty++;
+        }
+    }
+
+/*     echo $countempty;
+ */
+
+    /*    if($countempty==0)
+     {
+         header("location:add_employee_tab2.php");
+     } */
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
+
+
+
+
+<<<<<<< HEAD
     $data=array('id'=>$ee_id,'des'=>$ee_designation,'dep'=>$ee_department,'div'=>$ee_division,'type'=>$ee_type, 'doj'=>$ee_doj,'comp'=>$ee_comp_name,'rep'=>$ee_rep_manager,'shift'=>$ee_shift,
     'status'=>$ee_status );
 
@@ -469,16 +678,64 @@ if (isset($_POST['next'])) {
 
     
 
+=======
+     //IF EMPTY FIELD EXISTS, MESSAGE WILL DISPLAY 
+    if ($countempty != 0) {
+        echo " <div class='error'>
+        <p style=font-size:'xx large'><strong> Mandatory fields are not filled</strong> <br></p> </div> ";
+    } 
+    
+    
+
+    //IF NOT EMPTY , THEN LINK TO NEXT PAGE WILL BE ENABLED
+    
+    else {
 
 
+           //Data inserted
+    $query = "INSERT INTO employee_professional_details (ee_id, ee_designation, ee_department, ee_division, ee_type, ee_doj, ee_reporting_manager, ee_company_name, ee_shift,ee_status) 
+    VALUES ($ee_id, '$ee_designation', '$ee_department', '$ee_division', '$ee_type' , '$ee_doj', '$ee_rep_manager', '$ee_comp_name', '$ee_shift','$ee_status')";
+
+   
+       $selectquery=mysqli_query($connection,$query);
+
+
+       check($query);
+
+
+
+        echo " <div class='success'>
+        <p style=font-size:'xx large'><strong> Now you are allowed to visit next page.
+        Please click 
+
+        <a href='http://localhost/ems/add_employee_tab2.php'>Next>></a>
+        
+        
+        
+        </strong> <br></p> </div> ";
+    }
 
 
    
+   
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 
 
+<<<<<<< HEAD
+   
+=======
+}
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
+
+
+
+
+<<<<<<< HEAD
   
+=======
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
 

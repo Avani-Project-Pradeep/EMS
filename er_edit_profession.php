@@ -25,6 +25,10 @@
   $query = "SELECT * FROM employer_professional_details WHERE er_email='$email_loggedin'";
   $selectquery = mysqli_query($connection, $query);
 
+<<<<<<< HEAD
+=======
+  check($query); //checks result of  query execution
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 
   while ($row = mysqli_fetch_assoc($selectquery)) {

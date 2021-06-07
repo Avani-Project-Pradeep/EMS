@@ -4,7 +4,11 @@
   <title></title>
   <meta charset="utf-8">
  
+<<<<<<< HEAD
 <!-- STYLES -->
+=======
+
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
   <style>
   div {
     border-radius: 8px;
@@ -28,6 +32,7 @@
 <body>
 
 <?php //FETCHING DETAILS FROM PROFESSIONAL EMPLOYER TABLE
+<<<<<<< HEAD
       
       include "db_er_connection.php";
 
@@ -41,6 +46,19 @@
 
 
        //fetch data
+=======
+
+
+      
+     $email_loggedin=$_SESSION['email'];
+
+     $query="SELECT * FROM employer_professional_details WHERE er_email='$email_loggedin'";
+     $selectquery= mysqli_query($connection,$query);
+
+     check($query); //checks result of  query execution
+
+
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
       while($row=mysqli_fetch_assoc($selectquery))
       {
        $er_designation=$row['er_designation'];

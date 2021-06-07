@@ -45,7 +45,11 @@
 
 <?php
 
+<<<<<<< HEAD
 include "db_er_connection.php";
+=======
+include "db_connection.php";
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 
 //WHEN FORGOT IS SET, EMAIL ID FETCH
 if(isset($_POST['forgot']))
@@ -63,7 +67,11 @@ if(isset($_POST['forgot']))
 //SELECTING THE MAIL ID FROM DB
 
 
+<<<<<<< HEAD
 $query="SELECT * FROM er_login WHERE user_email='{$to_email}'";
+=======
+$query="SELECT * FROM user WHERE user_email='{$to_email}'";
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
 $select_user_query = mysqli_query($connection, $query);
 
 
@@ -92,7 +100,11 @@ else
 
 
    //UPDATE TOKEN VALUE
+<<<<<<< HEAD
     $query="UPDATE er_login SET token ='{$token}' WHERE user_email='{$to_email}'";
+=======
+    $query="UPDATE user SET token ='{$token}' WHERE user_email='{$to_email}'";
+>>>>>>> 5e1737651fde2b961074fbf268a7ab83fae6dba2
     $select_user_query = mysqli_query($connection, $query);
     
     
