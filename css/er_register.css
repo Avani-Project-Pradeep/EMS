@@ -1,0 +1,108 @@
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 16px;
+  
+
+}
+
+
+
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 20px 45%;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  opacity: 0.9;
+  position: relative 50px;
+  font-size: 30px;
+  
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.required:after { 
+    content:"*"; 
+    color: red;
+ }
+
+ .input1{
+    font-family: avenir;
+    font-size: 30px;
+    color: black;
+    font-weight: 200;
+    width: 200px;
+    padding: 15px;
+    border: 1px solid green;
+    border-radius: 5px;
+    width: 100%;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+  
+  }
+
+#location{
+    font-family: avenir;
+    font-size: 30px;
+    color: black;
+    font-weight: 200;
+    border: 1px solid green;    
+    width: 200px;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+
+}
+
+  
+
+
+  .asterisk_input:before {
+    content: " *";
+    color: #e32;
+    position: absolute;
+    margin: 0px 0px 0px -50px;
+    font-size: 35px;
+    padding: 0 0 5px 20px;
+  }
+
+  .asterisk_input1::before {
+    content: "*";
+    color: #e32;
+    position: absolute;
+    margin: 0px 0px -50px;
+    font-size: 35px;
+    padding: 0 0 5px 20px;
+  }
+  
+  
+
+  
